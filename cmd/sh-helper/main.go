@@ -88,10 +88,10 @@ func backupDir() string {
 // ----------------- Usage -----------------
 
 func usageAndExit() {
-	fmt.Println(`bash-alias-sudo-manager (Go)
+	fmt.Println(`cli-tool (Go)
 
 Usage:
-  bash-alias-sudo-manager <command> [subcommand] [args...]
+  cli-tool <command> [subcommand] [args...]
 
 Commands:
   alias    add <name> <command>   : add alias
@@ -117,9 +117,9 @@ Environment overrides:
   BASM_BACKUP_DIR     - backup directory (default: /tmp)
 
 Examples:
-  bash-alias-sudo-manager alias add ll "ls -la"
-  bash-alias-sudo-manager alias list
-  bash-alias-sudo-manager sudoers add "myuser ALL=(ALL) NOPASSWD: /usr/bin/somebinary"
+  cli-tool alias add ll "ls -la"
+  cli-tool alias list
+  cli-tool sudoers add "myuser ALL=(ALL) NOPASSWD: /usr/bin/somebinary"
 `)
 	os.Exit(1)
 }
