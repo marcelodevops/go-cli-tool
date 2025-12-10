@@ -88,7 +88,7 @@ func backupDir() string {
 // ----------------- Usage -----------------
 
 func usageAndExit() {
-	fmt.Println(`cli-tool (Go)
+	fmt.Print(`cli-tool (Go)
 
 Usage:
   cli-tool <command> [subcommand] [args...]
