@@ -4,17 +4,17 @@ BINARY_NAME = cli-tool
 PKG = github.com/marcelodevops/cli-tool
 
 build:
-	go build -o $(BINARY_NAME) ./cmd/cli-tool
+	go build -o $(BINARY_NAME) ./cmd/shctl
 
 cross:
-	GOOS=linux GOARCH=amd64 go build -o $(BINARY_NAME)-linux-amd64 ./cmd/cli-tool
-	GOOS=darwin GOARCH=arm64 go build -o $(BINARY_NAME)-darwin-arm64 ./cmd/cli-tool
+	GOOS=linux GOARCH=amd64 go build -o $(BINARY_NAME)-linux-amd64 ./cmd/shctl
+	GOOS=darwin GOARCH=arm64 go build -o $(BINARY_NAME)-darwin-arm64 ./cmd/shctl
 
 build-macos-arm64:
-	GOOS=darwin GOARCH=arm64 go build -o $(BINARY_NAME)-darwin-arm64 ./cmd/cli-tool
+	GOOS=darwin GOARCH=arm64 go build -o $(BINARY_NAME)-darwin-arm64 ./cmd/shctl
 
 build-linux-amd64:
-	GOOS=linux GOARCH=amd64 go build -o $(BINARY_NAME)-linux-amd64 ./cmd/cli-tool
+	GOOS=linux GOARCH=amd64 go build -o $(BINARY_NAME)-linux-amd64 ./cmd/shctl
 
 test:
 	go test ./...
