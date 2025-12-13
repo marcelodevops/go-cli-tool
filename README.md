@@ -41,3 +41,17 @@ goreleaser release --rm-dist
 
 ```
 
+## Notes
+
+- The tool validates sudoers changes via visudo -c -f <file> before applying.
+- When applying to /etc/sudoers the tool uses sudo cp, so you will be prompted for your password.
+
+
+---
+
+## What I did **not** change
+- I intentionally avoided adding external dependencies (Cobra, urfave/cli) to keep the binary tiny and avoid forcing vendoring/version bumps.
+- `util` uses straightforward functions to keep things explicit and testable.
+
+---
+
